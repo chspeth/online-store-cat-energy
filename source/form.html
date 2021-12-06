@@ -5,8 +5,8 @@
     <title>Кэт энерджи: форма</title>
   </head>
   <body class="page__body">
-    <header class="form-header" href="index.html">
-      <a class="form-header__logo">
+    <header class="form-header">
+      <a class="form-header__logo" href="index.html">
         <img class="form-header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
         <img class="form-header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
       </a>
@@ -111,9 +111,10 @@
           <legend class="comment__name">
             Комментарий
           </legend>
-          <label class="comment__label">
-            <textarea class="comment__field" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <label class="visually-hidden" for="comment">
+            Оставить комментарий
           </label>
+          <textarea class="comment__field" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__group additionally">
           <legend class="additionally__name">
