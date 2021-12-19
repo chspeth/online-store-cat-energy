@@ -2,13 +2,15 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
     <title>Кэт энерджи: форма</title>
   </head>
   <body class="page__body">
-    <header class="form-header">
-      <a class="form-header__logo" href="index.html">
-        <img class="form-header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
-        <img class="form-header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
+    <header class="form-header header">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
+        <img class="header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -18,17 +20,17 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">
+            <a class="main-nav__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="main-nav__item main-nav__item--current">
-            <a>
+            <a class="main-nav__link">
               Подбор программы
             </a>
           </li>
@@ -51,10 +53,12 @@
             Имя:*
             <input class="form__field" type="text" value="Барсик" required>
           </label>
+          <br>
           <label class="form__label">
             Вес (кг):*
             <input class="form__field" type="text" value="7" required>
           </label>
+          <br>
           <label class="form__label">
             Возраст (лет):
             <input class="form__field" type="text" value="7">
@@ -95,7 +99,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__group form-contacts">
-          <legend class="form-contacts__name">
+          <legend class="form-contacts__name form-subtitle">
             Контактные данные (владельца кота)
           </legend>
           <label class="form-contacts__label">
@@ -108,7 +112,7 @@
           </label>
         </fieldset>
         <fieldset class="form__group comment">
-          <legend class="comment__name">
+          <legend class="comment__name form-subtitle">
             Комментарий
           </legend>
           <label class="visually-hidden" for="comment">
@@ -117,7 +121,7 @@
           <textarea class="comment__field" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__group additionally">
-          <legend class="additionally__name">
+          <legend class="additionally__name form-subtitle">
             Дополнительно
           </legend>
           <ul class="additionally__list">
@@ -159,14 +163,14 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form__button" type="submit">
+        <button class="form__button link-order" type="submit">
           Отправить заявку
         </button>
         <span class="form__post-scriptum">
           * — Обязательные поля
         </span>
       </form>
-      <section class="location">
+      <section class="location--inner">
         <h2 class="visually-hidden">
           Наш адрес
         </h2>

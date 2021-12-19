@@ -2,13 +2,15 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
     <title>Кэт энерджи: каталог</title>
   </head>
   <body class="page__body">
-    <header class="inner-header">
-      <a class="inner-header__logo" href="index.html">
-        <img class="inner-header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
-        <img class="inner-header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
+    <header class="inner-header header">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
+        <img class="header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -18,17 +20,17 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item main-nav__item--current">
-            <a>
+            <a class="main-nav__link">
               Каталог продукции
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">
+            <a class="main-nav__link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -336,7 +338,7 @@
         </h2>
         <ul class="extra-catalog__list">
           <li class="extra-catalog__item">
-            <h3 class="extra-catalog__header">
+            <h3 class="extra-catalog__title">
               Сахарозаменитель
             </h3>
             <span class="extra-catalog__amount">
@@ -350,7 +352,7 @@
             </a>
           </li>
           <li class="extra-catalog__item">
-            <h3 class="extra-catalog__header">
+            <h3 class="extra-catalog__title">
               Питьевая вода
             </h3>
             <span class="extra-catalog__amount">
@@ -364,7 +366,7 @@
             </a>
           </li>
           <li class="extra-catalog__item">
-            <h3 class="extra-catalog__header">
+            <h3 class="extra-catalog__title">
               Молоко
             </h3>
             <span class="extra-catalog__amount">
@@ -378,7 +380,7 @@
             </a>
           </li>
           <li class="extra-catalog__item">
-            <h3 class="extra-catalog__header">
+            <h3 class="extra-catalog__title">
               Витамины
             </h3>
             <span class="extra-catalog__amount">
@@ -399,7 +401,7 @@
           </p>
         </div>
       </section>
-      <section class="location">
+      <section class="location--inner">
         <h2 class="visually-hidden">
           Наш адрес
         </h2>

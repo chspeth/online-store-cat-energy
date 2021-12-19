@@ -2,13 +2,15 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
-        <img class="page-header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
+    <header class="page-header header">
+      <a class="header__logo">
+        <img class="header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
+        <img class="header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -18,17 +20,17 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
-            <a>
+            <a class="main-nav__link">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">
+            <a class="main-nav__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">
+            <a class="main-nav__link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -58,14 +60,14 @@
           <h2 class="visually-hidden">
             Программы
           </h2>
-          <div class="programs__slim-program slim-program">
-            <h3 class="slim-program__header">
+          <div class="programs__slim-program program-card">
+            <h3 class="program-card__header">
               Похудение
             </h3>
-            <p class="slim-program__text">
+            <p class="program-card__text">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a class="slim-program__link link-to-catalog">
+            <a class="program-card__link link-to-catalog" href="#">
               <span class="link-to-catalog__text">
                 Каталог Slim
               </span>
@@ -75,14 +77,14 @@
               </svg>
             </a>
           </div>
-          <div class="programs__pro-program pro-program">
-            <h3 class="pro-program__header">
+          <div class="programs__pro-program program-card">
+            <h3 class="program-card__header">
               Набор массы
             </h3>
-            <p class="pro-program__text">
+            <p class="program-card__text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a class="pro-program__link link-to-catalog">
+            <a class="program-card__link link-to-catalog" href="#">
               <span class="link-to-catalog__text">
                 Каталог Pro
               </span>
