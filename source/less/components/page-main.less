@@ -1,6 +1,11 @@
 .page-main__header {
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: @promo-text-color;
+
+  @media (min-width: @tablet-width) {
+    color: @accent-text-color;
+  }
 }

@@ -1,6 +1,18 @@
 .program-card {
-  padding-left: 20px;
   background-color: @darker-bg-color;
+
+  width: 280px;
+  min-height: 266px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    min-height: 374px;
+  }
 }
 
 .program-card__header {
