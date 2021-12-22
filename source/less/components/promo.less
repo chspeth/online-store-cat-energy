@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
   background-size: 320px 302px;
   z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    color: @accent-text-color;
+  }
 }
 
 .promo::before {
@@ -19,6 +24,27 @@
   width: 320px;
   height: 302px;
   background-color: @cover-bg-color;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .promo__slogan {
@@ -33,4 +59,7 @@
   text-decoration: none;
   color: @promo-text-color;
   background-color: @cover-bg-color;
+
+  width: 280px;
+  height: 40px;
 }
