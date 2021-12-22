@@ -1,13 +1,17 @@
 .page-footer {
+  background-color: @darker-bg-color;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  background-color: @darker-bg-color;
   width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 708px;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
