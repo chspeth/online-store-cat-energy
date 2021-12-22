@@ -1,3 +1,19 @@
+.form-main__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
 .form-main__header {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
