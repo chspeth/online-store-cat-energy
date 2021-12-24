@@ -1,3 +1,13 @@
 .target {
   color: @target-catalog-text-color;
+
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
 }

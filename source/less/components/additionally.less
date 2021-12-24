@@ -1,3 +1,21 @@
+.additionally__list {
+  display: grid;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 288px);
+    gap: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 80px;
+  }
+}
+
 .additionally__item {
   color: @accent-text-color;
 }

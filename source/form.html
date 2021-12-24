@@ -49,71 +49,75 @@
         </p>
       </div>
       <form class="form-main__form form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__group">
-          <legend class="visually-hidden">
-            Данные кота
-          </legend>
-          <label class="form__label">
-            Имя:*
-            <input class="form__field" type="text" value="Барсик" required>
-          </label>
-          <br>
-          <label class="form__label">
-            Вес (кг):*
-            <input class="form__field" type="text" value="7" required>
-          </label>
-          <br>
-          <label class="form__label">
-            Возраст (лет):
-            <input class="form__field" type="text" value="7">
-          </label>
-        </fieldset>
-        <fieldset class="form__group target">
-          <legend class="visually-hidden">
-            Ваша цель
-          </legend>
-          <ul class="target__list">
-            <li class="target__item">
-              <label class="target__label">
-                <input class="visually-hidden" type="radio" name="target" value="slimming" checked>
-                <span class="target__control-mark"></span>
-                <span class="target__control-label">
-                  Похудение
-                </span>
-              </label>
-            </li>
-            <li class="target__item">
-              <label class="target__label">
-                <input class="visually-hidden" type="radio" name="target" value="weight-gain">
-                <span class="target__control-mark"></span>
-                <span class="target__control-label">
-                  Набор массы
-                </span>
-              </label>
-            </li>
-            <li class="target__item">
-              <label class="target__label">
-                <input class="visually-hidden" type="radio" name="target" value="unknown">
-                <span class="target__control-mark"></span>
-                <span class="target__control-label">
-                  Не знаю (Нужен ваш совет)
-                </span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form__wrapper">
+          <fieldset class="form__group cat-data">
+            <legend class="visually-hidden">
+              Данные кота
+            </legend>
+            <label class="form__label">
+              Имя:*
+              <input class="form__field" type="text" value="Барсик" required>
+            </label>
+            <br>
+            <label class="form__label">
+              Вес (кг):*
+              <input class="form__field" type="text" value="7" required>
+            </label>
+            <br>
+            <label class="form__label">
+              Возраст (лет):
+              <input class="form__field" type="text" value="7">
+            </label>
+          </fieldset>
+          <fieldset class="form__group target">
+            <legend class="visually-hidden">
+              Ваша цель
+            </legend>
+            <ul class="target__list">
+              <li class="target__item">
+                <label class="target__label">
+                  <input class="visually-hidden" type="radio" name="target" value="slimming" checked>
+                  <span class="target__control-mark"></span>
+                  <span class="target__control-label">
+                    Похудение
+                  </span>
+                </label>
+              </li>
+              <li class="target__item">
+                <label class="target__label">
+                  <input class="visually-hidden" type="radio" name="target" value="weight-gain">
+                  <span class="target__control-mark"></span>
+                  <span class="target__control-label">
+                    Набор массы
+                  </span>
+                </label>
+              </li>
+              <li class="target__item">
+                <label class="target__label">
+                  <input class="visually-hidden" type="radio" name="target" value="unknown">
+                  <span class="target__control-mark"></span>
+                  <span class="target__control-label">
+                    Не знаю (Нужен ваш совет)
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="form__group form-contacts">
           <legend class="form-contacts__name form-subtitle">
             Контактные данные (владельца кота)
           </legend>
-          <label class="form-contacts__label">
-            E-mail:*
-            <input class="form-contacts__field" type="email" value="kuklachev@gmail.com" required>
-          </label>
-          <label class="form-contacts__label">
-            Телефон:*
-            <input class="form-contacts__field" type="tel" value="8 (960) 900-60-90" required>
-          </label>
+          <div class="form-contacts__wrapper">
+            <label class="form-contacts__label">
+              E-mail:*
+              <input class="form-contacts__field" type="email" value="kuklachev@gmail.com" required>
+            </label>
+            <label class="form-contacts__label">
+              Телефон:*
+              <input class="form-contacts__field" type="tel" value="8 (960) 900-60-90" required>
+            </label>
+          </div>
         </fieldset>
         <fieldset class="form__group comment">
           <legend class="comment__name form-subtitle">
@@ -167,12 +171,14 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form__button link-order" type="submit">
-          Отправить заявку
-        </button>
-        <span class="form__post-scriptum">
-          * — Обязательные поля
-        </span>
+        <div class="form__bottom-wrapper">
+          <button class="form__button link-order" type="submit">
+            Отправить заявку
+          </button>
+          <span class="form__post-scriptum">
+            * — Обязательные поля
+          </span>
+        </div>
       </form>
       <section class="location--inner">
         <h2 class="visually-hidden">
