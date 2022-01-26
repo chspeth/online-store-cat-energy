@@ -1,0 +1,49 @@
+@media (min-width: @tablet-width) {
+  .range {
+    position: static;
+    display: block;
+    width: 426px;
+    height: 40px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    margin-right: 23px;
+    margin-left: 23px;
+  }
+
+  .range__scale {
+    position: relative;
+    height: 6px;
+    width: 426px;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+  }
+
+  .range__toggle {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    top: -16px;
+    background-color: @base-bg-color;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-sizing: border-box;
+    left: 193px;
+
+    @media (min-width: @desktop-width) {
+      left: 198px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .range__toggle::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: @cover-bg-color;
+    border-radius: 50%;
+    top: 13px;
+    left: 12px;
+  }
+}

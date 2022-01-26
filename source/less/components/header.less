@@ -16,12 +16,38 @@
 
   width: 280px;
   margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 92%;
+    max-width: 1220px;
+    margin-top: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    margin-top: 50px;
   }
+}
+
+.header__logo-image {
+  display: inline-block;
+  width: 34px;
+  height: 38px;
+  margin-right: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 14px;
+  }
+}
+
+.header__logo-text {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: 101px;
+  height: 18px;
 }
