@@ -1,7 +1,7 @@
 @media (min-width: @desktop-width) {
   .location {
     display: grid;
-    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-columns: 1fr 1220px 1fr;
     grid-template-rows: 95px min-content 1fr;
   }
 
@@ -33,6 +33,10 @@
     width: 175px;
     padding-top: 3px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 .location__address {
@@ -44,6 +48,11 @@
     width: 160px;
     font-size: 16px;
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    padding-right: 75px;
   }
 }
 
