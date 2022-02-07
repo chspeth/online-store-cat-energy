@@ -6,11 +6,15 @@
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--index">
     <header class="page-header header">
       <div class="header__wrapper header__wrapper--without-js">
         <a class="header__logo">
-          <img class="header__logo-image" src="img/logotypes/logo-mobile-img.svg" width="34" height="38" alt="Функциональное питание для котов">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logotypes/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logotypes/logo-tablet.svg">
+            <img class="header__logo-image" src="img/logotypes/logo-mobile.svg" width="34" height="38" alt="Функциональное питание для котов">
+          </picture>
           <img class="header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
         <nav class="main-nav main-nav--opened main-nav--without-js">
@@ -53,7 +57,11 @@
           <p class="promo__slogan">
             Занялся собой? Займись котом!
           </p>
-          <img class="promo__image" src="img/content/promo-mobile.png" width="280" height="270" alt="Продукт «Cat Energy Pro» с курицей">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/content/promo-desktop@1x.png 1x, img/content/promo-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/content/promo-tablet@1x.png 1x, img/content/promo-tablet@2x.png 2x">
+            <img class="promo__image" src="img/content/promo-mobile@1x.png" srcset="img/content/promo-mobile@2x.png 2x" width="280" height="270" alt="Продукт «Cat Energy Pro» с курицей">
+          </picture>
           <a class="promo__button" href="form.html">
             Подобрать программу
           </a>
@@ -156,8 +164,14 @@
             </span>
           </p>
           <div class="example__pictures">
-            <img class="example__image example__image--fat-cat" src="img/content/fat-cat-mobile.png" alt="Кот до спецпитания">
-            <img class="example__image example__image--thin-cat visually-hidden" src="img/content/thin-cat-mobile.png" alt="Кот после спецпитания">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/content/fat-cat-tablet@1x.png 1x, img/content/fat-cat-tablet@2x.png 2x">
+              <img class="example__image example__image--fat-cat" src="img/content/fat-cat-mobile@1x.png" srcset="img/content/fat-cat-mobile@1x.png 2x" alt="Кот до спецпитания">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/content/thin-cat-tablet@1x.png 1x, img/content/thin-cat-tablet@2x.png 2x">
+              <img class="example__image example__image--thin-cat" src="img/content/thin-cat-mobile@1x.png" srcset="img/content/thin-cat-mobile@2x.png 2x" alt="Кот после спецпитания">
+            </picture>
           </div>
           <div class="example__variants variants">
             <button class="variants__text" type="button">
@@ -190,9 +204,13 @@
             Приглашаем <br>к сотрудничеству дилеров!
           </span>
           <address class="location__address">
-            <p class="location__paragraph">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="location__paragraph">
+              ул. Большая Конюшенная, д. 19/8
+            </p>
             <br>
-            <p class="location__paragraph">Санкт-Петербург</p>
+            <p class="location__paragraph">
+              Санкт-Петербург
+            </p>
           </address>
         </div>
         <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858716014556!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640773187712!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>

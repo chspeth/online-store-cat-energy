@@ -1,13 +1,74 @@
+.additionally {
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 39px;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.additionally__name {
+  position: relative;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
+}
+
+.additionally__name::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: -158px;
+  left: 166px;
+  border-bottom: 2px solid @cover-bg-color;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    right: -487px;
+    left: 255px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 23px;
+    right: -1120px;
+  }
+}
+
+.additionally__name::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    top: 22px;
+    right: 250px;
+    left: -65px;
+    border-bottom: 2px solid @cover-bg-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -107px;
+  }
+}
+
 .additionally__list {
   display: grid;
 
   padding: 0;
+  padding-left: 46px;
   margin: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 288px);
-    gap: 55px;
+    gap: 18px 56px;
+
+    padding-left: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -18,4 +79,51 @@
 
 .additionally__item {
   color: @accent-text-color;
+  margin-bottom: 25px;
+}
+
+.additionally__control {
+  position: relative;
+}
+
+.additionally__control-mark {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: -2px;
+  left: -47px;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -59px;
+  }
+}
+
+.additionally__control-input:checked + .additionally__control-mark::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 14px;
+  top: 7px;
+  left: 6px;
+  background-image: url("../../img/icons/green-checkmark.svg");
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 19px;
+    background-size: 24px 19px;
+    top: 9px;
+    left: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 7px;
+  }
 }

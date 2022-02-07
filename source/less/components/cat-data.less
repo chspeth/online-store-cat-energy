@@ -1,11 +1,42 @@
 .cat-data {
+  position: relative;
   width: 280px;
 
   @media (min-width: @tablet-width) {
     width: 630px;
+    padding-left: 40px;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    padding-left: 0;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .cat-data::after {
+    position: absolute;
+    content: "";
+    top: 186px;
+    left: -8%;
+    right: -7%;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.cat-data input[type="text"] {
+  height: 45px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  padding-left: 15px;
+  border: 1px solid @field-border-color;
+
   @media (min-width: @tablet-width) {
-    width: 569px;
+    height: 52px;
+    margin-bottom: 20px;
   }
 }

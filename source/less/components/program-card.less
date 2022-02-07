@@ -31,6 +31,7 @@
 }
 
 .program-card__header {
+  position: relative;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -54,6 +55,12 @@
     margin-left: 162px;
     margin-bottom: 73px;
   }
+}
+
+.program-card__header::before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
 }
 
 .program-card__text {
