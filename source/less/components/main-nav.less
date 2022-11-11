@@ -1,30 +1,181 @@
+.main-nav {
+  position: relative;
+  width: auto;
+  min-height: 38px;
+}
+
 .main-nav__toggle {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 2;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @accent-text-color;
+  box-shadow: 0 8px 0 0 @accent-text-color, 0 16px 0 0 @accent-text-color;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@accent-text-color, 30%);
+  box-shadow: 0 8px 0 0 fade(@accent-text-color, 30%),
+    0 16px 0 0 fade(@accent-text-color, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @accent-text-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@accent-text-color, 30%);
+  }
+}
+
 .main-nav__list {
+  position: absolute;
+  top: 54px;
+  left: -300px;
+  width: 100vw;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  z-index: 10;
 
   margin: 0;
   padding: 0;
   list-style: none;
 
   @media (min-width: @tablet-width) {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 440px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
+    width: 500px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--without-js .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--without-js .main-nav__list {
+    position: static;
+    margin-top: 11px;
+    margin-left: -20px;
   }
 }
 
 .main-nav__link {
-  text-decoration: none;
+  display: inline-block;
   color: @accent-text-color;
+  text-decoration: none;
+
+  padding-top: 22px;
+  padding-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 18px;
+    padding-bottom: 12px;
+
+    &--current,
+    &:focus {
+      text-decoration: underline;
+      text-decoration-color: @cover-bg-color;
+      text-underline-offset: 10px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @accent-text-color;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    text-decoration: none;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+
+  background-color: @base-bg-color;
+
+  &:last-of-type {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-right: 35px;
+
+    &:last-of-type {
+      border: none;
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
