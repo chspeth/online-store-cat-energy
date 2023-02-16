@@ -12,6 +12,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import {deleteAsync} from 'del';
 import svgstore from 'gulp-svgstore';
+import ghpages from 'gh-pages';
 
 // Styles
 
@@ -165,3 +166,5 @@ export default gulp.series(
     watcher
   )
 );
+
+ghpages.publish("build");
