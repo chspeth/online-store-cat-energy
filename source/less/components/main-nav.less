@@ -1,13 +1,15 @@
+@import "../global/variables.less";
+
 .main-nav {
   position: relative;
   width: auto;
-  min-height: 38px;
+  padding-bottom: 12px;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 10px;
-  right: 0;
+  top: -31px;
+  right: 20px;
   z-index: 2;
   width: 24px;
   height: 20px;
@@ -66,9 +68,9 @@
 
 .main-nav__list {
   position: absolute;
-  top: 54px;
-  left: -300px;
-  width: 100vw;
+  top: 12px;
+  left: 0;
+  width: 100%;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -107,14 +109,9 @@
     display: none;
   }
 
-  .main-nav--without-js .main-nav__toggle {
-    display: none;
-  }
-
   .main-nav--without-js .main-nav__list {
     position: static;
     margin-top: 11px;
-    margin-left: -20px;
   }
 }
 
@@ -134,7 +131,7 @@
     &:focus {
       text-decoration: underline;
       text-decoration-color: @cover-bg-color;
-      text-underline-offset: 10px;
+      text-underline-offset: 11px;
     }
   }
 
@@ -148,6 +145,11 @@
 
   @media (min-width: @desktop-width) {
     color: @accent-text-color;
+
+    &--current,
+    &:focus {
+      text-underline-offset: 13px;
+    }
   }
 
   @media (max-width: @mobile-width-only) {

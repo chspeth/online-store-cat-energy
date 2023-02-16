@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!-- 32x32 -->
+    <link rel="icon" href="./img/icons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/icons/fav_apple_152.png"> <!-- 152x152 -->
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body page__body--index">
     <header class="page-header header">
-      <div class="header__wrapper header__wrapper--without-js">
+      <div class="header__wrapper">
         <a class="header__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logotypes/logo-desktop.svg">
@@ -17,7 +20,7 @@
           </picture>
           <img class="header__logo-text" src="img/logotypes/logo-text-header.svg" width="101" height="18" alt="Cat Energy">
         </a>
-        <nav class="main-nav main-nav--opened main-nav--without-js">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">
               Открыть меню
@@ -58,6 +61,9 @@
             Занялся собой? Займись котом!
           </p>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/promo-desktop@1x.webp 1x, img/content/promo-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/promo-tablet@1x.webp 1x, img/content/promo-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/content/promo-mobile@1x.webp 1x, img/content/promo-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/content/promo-desktop@1x.png 1x, img/content/promo-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/content/promo-tablet@1x.png 1x, img/content/promo-tablet@2x.png 2x">
             <img class="promo__image" src="img/content/promo-mobile@1x.png" srcset="img/content/promo-mobile@2x.png 2x" width="280" height="270" alt="Продукт «Cat Energy Pro» с курицей">
@@ -83,9 +89,8 @@
               <span class="link-to-catalog__text link-to-catalog__text-slim">
                 Каталог Slim
               </span>
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+              <svg width="24" height="12">
+                <use xlink:href="./img/sprite.svg#arrow"></use>
               </svg>
             </a>
           </div>
@@ -100,9 +105,8 @@
               <span class="link-to-catalog__text">
                 Каталог Pro
               </span>
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
+              <svg width="24" height="12">
+                <use xlink:href="./img/sprite.svg#arrow"></use>
               </svg>
             </a>
           </div>
@@ -115,16 +119,24 @@
           </h2>
           <ul class="about__list">
             <li class="about__item">
-              Функциональное питание содержит только полезные питательные вещества.
+              <p class="about__text">
+                Функциональное питание содержит только полезные питательные вещества.
+              </p>
             </li>
             <li class="about__item">
-              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              <p class="about__text">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              </p>
             </li>
             <li class="about__item">
-              Замените один-два приема обычной еды на наше функциональное питание.
+              <p class="about__text">
+                Замените один-два приема обычной еды на наше функциональное питание.
+              </p>
             </li>
             <li class="about__item">
-              Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!
+              <p class="about__text">
+                Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br> вашего питомца!
+              </p>
             </li>
           </ul>
         </div>
@@ -143,7 +155,7 @@
                 5 кг
               </dt>
               <dd class="example__description">
-                Снижение <br>веса
+                Снижение&nbsp;<br>веса
               </dd>
             </div>
             <div class="example__item">
@@ -165,10 +177,14 @@
           </p>
           <div class="example__pictures">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/fat-cat-tablet@1x.webp 1x, img/content/fat-cat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/fat-cat-mobile@1x.webp 1x, img/content/fat-cat-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/content/fat-cat-tablet@1x.png 1x, img/content/fat-cat-tablet@2x.png 2x">
-              <img class="example__image example__image--fat-cat" src="img/content/fat-cat-mobile@1x.png" srcset="img/content/fat-cat-mobile@1x.png 2x" alt="Кот до спецпитания">
+              <img class="example__image example__image--fat-cat" src="img/content/fat-cat-mobile@1x.png" srcset="img/content/fat-cat-mobile@2x.png 2x" alt="Кот до спецпитания">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/thin-cat-tablet@1x.webp 1x, img/content/thin-cat-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/thin-cat-mobile@1x.webp 1x, img/content/thin-cat-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/content/thin-cat-tablet@1x.png 1x, img/content/thin-cat-tablet@2x.png 2x">
               <img class="example__image example__image--thin-cat" src="img/content/thin-cat-mobile@1x.png" srcset="img/content/thin-cat-mobile@2x.png 2x" alt="Кот после спецпитания">
             </picture>
@@ -226,17 +242,26 @@
         <ul class="page-footer__list">
           <li class="page-footer__item">
             <a class="page-footer__link page-footer__link--vkontakte" href="https://vk.com/htmlacademy">
-              Мы в Вконтакте
-            </a>
-          </li>
-          <li class="page-footer__item">
-            <a class="page-footer__link page-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
-              Мы в Фейсбуке
+              <span class="visually-hidden">Мы в Вконтакте</span>
+              <svg width="23" height="16" viewBox="0 0 23 16">
+                <use xlink:href="./img/sprite.svg#vk"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__item">
             <a class="page-footer__link page-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
-              Мы в Инстаграме
+              <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg width="16" height="16" viewBox="0 0 16 16">
+                <use xlink:href="./img/sprite.svg#inst"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg width="22" height="22" viewBox="0 0 22 22">
+                <use xlink:href="./img/sprite.svg#fb"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -245,8 +270,8 @@
             <span class="copyright__htmlacademy-text">
               HTML Academy
             </span>
-            <svg class="copyright__htmlacademy-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-              <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+            <svg class="copyright__htmlacademy-logo" width="27" height="34">
+              <use xlink:href="./img/sprite.svg#academy"></use>
             </svg>
           </a>
         </div>
