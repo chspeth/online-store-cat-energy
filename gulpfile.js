@@ -167,4 +167,4 @@ export default gulp.series(
   )
 );
 
-ghpages.publish("build");
+ghpages.publish('build', function(err) {});
